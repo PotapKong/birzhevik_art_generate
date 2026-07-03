@@ -1,0 +1,4 @@
+interface:
+  display_name: "Birzhevik Art Generator"
+  short_description: "Generate premium Birzhevik branded financial covers and social visuals with GPT Image 2 and strict reference matching."
+  default_prompt: "Create a premium Birzhevik branded image from the post, article, video, or podcast topic. Before generating, read the required references, inspect 3-5 closest Birzhevik reference images, choose a Reference DNA archetype, verify any official product or market assets, and generate a finished GPT Image 2 cover with concise Russian headline, Birzhevik typography, dark blue/cyan palette, logo discipline, and safe-zone rules."

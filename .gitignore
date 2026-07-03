@@ -1,0 +1,11 @@
+_cache/
+outputs/
+inputs/
+.env
+.env.*
+!.env.example
+node_modules/
+*.tmp
+*.log
+Thumbs.db
+.DS_Store
