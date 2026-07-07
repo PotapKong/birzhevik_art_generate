@@ -29,12 +29,14 @@ If the final image needs the official logo/lockup:
 1. Select one real logo reference from `assets/brand/` or `references/images/`.
 2. Attach or otherwise provide that logo reference to GPT Image 2 when the tool supports image references.
 3. In the prompt, require the logo to stay exactly as in the reference: same mark geometry, word spelling, proportions, colors, spacing, and orientation.
-4. Do not ask the model to create a new mark, retype the wordmark, trace from memory, recolor, stretch, crop, or approximate the logo.
+4. Ask GPT Image 2 to integrate the referenced logo organically into the scene: printed, embossed, illuminated, engraved, or mounted on a glass tile, token, device, dark panel, microphone plate, chart object, or clean lockup surface.
+5. Require matching perspective, lighting, shadows, reflections, material, and depth so the logo feels native to the generated image, not pasted on top.
+6. Do not ask the model to create a new mark, retype the wordmark, trace from memory, recolor, stretch, crop, or approximate the logo.
 
 If the generation tool cannot pass image references, or the model distorts the logo:
 
-- generate with a clean logo area;
-- repair by compositing one real `assets/brand/` logo/lockup file after generation;
+- generate with a natural logo placement surface;
+- repair by compositing one real `assets/brand/` logo/lockup file after generation, matching the target surface, perspective, lighting, and shadow;
 - do not accept the distorted logo as final.
 
 Generated token/coin/glass objects may use abstract Birzhevik-inspired geometry only as background scene objects, never as the final official lockup or mark.
@@ -49,6 +51,7 @@ Generated token/coin/glass objects may use abstract Birzhevik-inspired geometry 
 ## Checks
 
 - Logo is not stretched.
+- Logo feels integrated into the scene, not pasted as a flat sticker.
 - Logo mark is not warped into a random Z/S shape.
 - Word `Биржевик` is spelled correctly.
 - Logo does not compete with the headline.

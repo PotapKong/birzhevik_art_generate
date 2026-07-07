@@ -8,7 +8,7 @@ This repo is modeled after `PotapKong/human20-cover-generator`, but the brand sy
 
 - Creates prompt-ready and generation-ready instructions for GPT Image 2.
 - Hard-locks the main artwork path to GPT Image 2, not code-generated PIL/HTML/SVG/Canvas templates.
-- Hard-locks Birzhevik logo usage to real references from `assets/brand/` or `references/images/`; GPT Image 2 must not invent the logo from memory.
+- Hard-locks Birzhevik logo usage to real references from `assets/brand/` or `references/images/`; GPT Image 2 must not invent the logo from memory and must integrate the referenced logo organically into the scene.
 - Forces reference intake before generation.
 - Supports article covers, Telegram/Dzen covers, video previews, podcast covers, vertical social covers, and clean financial infographics.
 - Keeps third-party logos, charts, broker/exchange marks, and market screenshots on an official-asset or text-only fallback path.
@@ -78,7 +78,7 @@ assets/brand/VelaSansGX.ttf
 assets/brand/Manrope.ttf
 ```
 
-Generation prompts must first select a real logo reference from `assets/brand/` or `references/images/`, pass that reference to GPT Image 2 when image references are supported, and explicitly require the logo to stay unchanged: same geometry, spelling, colors, proportions, and spacing. Do not ask GPT Image 2 to draw, spell, stylize, approximate, or invent the official Birzhevik logo from memory. If the tool cannot pass a reference or the result distorts the logo, repair by overlaying a real `assets/brand/` asset after generation.
+Generation prompts must first select a real logo reference from `assets/brand/` or `references/images/`, pass that reference to GPT Image 2 when image references are supported, and explicitly require the logo to stay unchanged: same geometry, spelling, colors, proportions, and spacing. The logo should be organically integrated into the generated scene as a real surface or object detail, not pasted on as a flat sticker. Do not ask GPT Image 2 to draw, spell, stylize, approximate, or invent the official Birzhevik logo from memory. If the tool cannot pass a reference or the result distorts the logo, repair by overlaying a real `assets/brand/` asset after generation and match perspective, lighting, shadows, and material.
 
 ## Scripts
 

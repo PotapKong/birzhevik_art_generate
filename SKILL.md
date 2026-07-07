@@ -17,6 +17,8 @@ Use GPT Image 2 as the approved generation backend for Birzhevik covers unless t
 
 Do not ask GPT Image 2 to invent, redraw, spell, or approximate the official Birzhevik logo, mark, or lockup from memory. When the final image needs a logo, first use real logo references from `assets/brand/` or `references/images/`, then send the request to GPT Image 2 with that logo reference and explicitly require the logo to be preserved exactly, unchanged, undistorted, unredrawn, and with the same proportions.
 
+The logo should be organically integrated into the generated scene, not pasted on like a sticker. Ask GPT Image 2 to place the referenced logo as a native design element: on a glass tile, metallic token, dark brand panel, device surface, microphone plate, chart object, or clean lockup area, with matching perspective, lighting, shadows, reflections, material, and depth.
+
 ## Hard No Code-Generated Artwork Rule
 
 Do not use code generation as the primary image-making path for Birzhevik visuals. Do not create the cover/banner/preview as a flat PIL, Python, HTML, CSS, SVG, Canvas, or scripted layout when the task is to generate a branded image.
@@ -96,8 +98,9 @@ Do not generate if you cannot name one DNA archetype and at least 3 concrete vis
    - if the final image needs the official mark, wordmark, or lockup, select a real reference file from `assets/brand/` or `references/images/` before prompting;
    - include or attach that real logo reference in the GPT Image 2 request whenever the tool supports image references;
    - explicitly instruct GPT Image 2 to preserve the logo exactly as in the reference: no redraw, no retyping, no style drift, no proportion changes, no invented variants;
+   - instruct GPT Image 2 to integrate the referenced logo naturally into the scene surface or object, with matching light, perspective, material, and depth;
    - never ask GPT Image 2 to draw or type the official logo/wordmark from memory;
-   - if the available generation tool cannot pass a logo reference, generate the scene with a clean logo area and repair by overlaying the real asset after generation.
+   - if the available generation tool cannot pass a logo reference, generate the scene with a natural logo placement area and repair by overlaying the real asset after generation with matched lighting and perspective.
 10. Apply Birzhevik brand rules:
    - dark financial canvas, usually near-black/navy;
    - primary darks `#00004A` and `#01037A`;
@@ -207,7 +210,7 @@ Brand style:
 Use the Birzhevik identity: deep navy/near-black canvas, dark blues #00004A and #01037A, bright cyan #02A5FF, electric blue #0199F7 and #0042FF, and the blue gradient #02A5FF -> #0042FF for glow, token rim, or key accent. Use white typography. Typography should follow Vela Sans GX / Manrope proportions: clean modern grotesk, large confident Cyrillic, tight but readable line height. Premium financial editorial mood, not casino trading hype.
 
 Logo/footer:
-Use a real Birzhevik logo reference from `assets/brand/` or `references/images/` in the GPT Image 2 request. Tell the model to preserve the referenced logo exactly and unchanged: same mark geometry, word spelling, proportions, colors, and spacing. If the model distorts the logo or cannot accept image references, repair with a real `assets/brand/` logo overlay after generation.
+Use a real Birzhevik logo reference from `assets/brand/` or `references/images/` in the GPT Image 2 request. Tell the model to preserve the referenced logo exactly and unchanged: same mark geometry, word spelling, proportions, colors, and spacing. Also tell it to integrate the logo organically into the composition as a real scene element, not as a flat pasted watermark. If the model distorts the logo or cannot accept image references, repair with a real `assets/brand/` logo overlay after generation and match the surface, perspective, lighting, and shadow.
 
 Core meaning:
 <one paragraph explaining the post's main claim and why the viewer should care>

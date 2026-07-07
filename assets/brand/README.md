@@ -9,7 +9,7 @@ Current reference-derived PNG assets, cropped from the supplied Birzhevik identi
 - `birzhevik-lockup-reference-panel.png` — white mark plus white `Биржевик` lockup on dark gradient/grid panel, cropped from `references/images/birzhevik-identity-page-1.png`.
 - `birzhevik-mark-reference-blue-on-dark-tile.png` — blue mark on dark rounded tile, cropped from `references/images/birzhevik-identity-page-1.png`.
 
-Use these real assets as logo references in GPT Image 2 requests until cleaner official SVG/PNG exports are supplied. The prompt must require the model to preserve the referenced logo exactly and unchanged. If the model distorts the logo, use these files for a narrow post-generation logo repair. Do not ask an image model to redraw or invent the official Birzhevik logo from memory.
+Use these real assets as logo references in GPT Image 2 requests until cleaner official SVG/PNG exports are supplied. The prompt must require the model to preserve the referenced logo exactly and unchanged while integrating it organically into the scene surface or hero object. If the model distorts the logo, use these files for a narrow post-generation logo repair that matches perspective, lighting, shadows, and material. Do not ask an image model to redraw or invent the official Birzhevik logo from memory.
 
 Recommended files:
 

@@ -49,6 +49,7 @@ Use real references from `assets/brand/` or `references/images/` when a logo app
 
 Avoid:
 
+- flat sticker-like logo placement that ignores scene lighting, material, perspective, or shadows;
 - generated S-like marks presented as official;
 - misspelled or warped `Биржевик` wordmarks;
 - logo-like marks created only by prompt wording, without a real logo reference;
