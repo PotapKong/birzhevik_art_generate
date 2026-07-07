@@ -7,7 +7,7 @@ Use this file after inspecting the actual reference images. It captures the shar
 - Dark navy/black financial canvas.
 - Electric blue and cyan glow as the energy source.
 - Large white Cyrillic headline with clean modern grotesk proportions.
-- Birzhevik logo or S-like mark appears as a real object, tile, token, or compact lockup.
+- The official Birzhevik logo or lockup, when present, is based on a real reference from `assets/brand/` or `references/images/`. S-like geometry may appear only as an abstract token/object motif, not as a prompt-invented official logo.
 - Market context is visible through candles, charts, line graphs, grids, or financial topic chips.
 - A single strong 3D object carries the visual: token stack, coin, chart arrow, microphone, glass logo tile, or gripper.
 - Rounded media frames and glass pills feel premium, not default SaaS cards.
@@ -19,7 +19,7 @@ Use this file after inspecting the actual reference images. It captures the shar
 
 Use for channel headers, Telegram/Dzen covers, and market-wide topics.
 
-Look: dark panoramic background, large brand name or headline on the left, candlestick/chart atmosphere, glass topic chips, logo object or mark in the center/right.
+Look: dark panoramic background, large brand name or headline on the left, candlestick/chart atmosphere, glass topic chips, real Birzhevik logo reference preserved without changes, and optional abstract token object in the center/right.
 
 ### Token Hero
 
@@ -51,7 +51,7 @@ Reject and regenerate when:
 
 - the result looks like a generic trading thumbnail;
 - charts contain fake precise numbers or misleading labels;
-- the Birzhevik mark is distorted but presented as official;
+- the Birzhevik mark is generated, distorted, or presented as official without a real `assets/brand/` or `references/images/` reference;
 - the headline is too small or too long;
 - the image uses green/red market colors as the main brand palette;
 - the style becomes neon casino, cyberpunk, crypto pump, or luxury-black with no market context;

@@ -9,7 +9,7 @@ Use this reference to keep generated images close to the supplied Birzhevik iden
 - One blue/cyan support line, accent word, glow, or object edge.
 - One dominant market object: token stack, logo tile, coin, microphone, chart arrow, or framed chart/device.
 - Subtle candlestick, grid, line chart, or gradient wave texture.
-- Compact Birzhevik mark/lockup in a safe zone when useful.
+- Compact Birzhevik mark/lockup in a safe zone when useful, preserved from a real `assets/brand/` or `references/images/` logo reference rather than generated from memory.
 - Rounded media frame with large radius for headers, previews, and podcast covers.
 - Glass chips may be used for short rubrics, but only 1-4 at a time.
 
@@ -23,7 +23,7 @@ Use this reference to keep generated images close to the supplied Birzhevik iden
 - Primary text: white or near-white.
 - Support text: pale gray/blue-gray.
 
-Use the gradient `#02A5FF -> #0042FF` for the mark, token glow, rim light, or single accent band.
+Use the gradient `#02A5FF -> #0042FF` for token glow, rim light, or a single accent band. When the official logo appears, provide a real logo reference and require the gradient/proportions to remain unchanged.
 
 ## Typography
 

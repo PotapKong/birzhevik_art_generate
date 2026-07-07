@@ -1,12 +1,19 @@
 # Logo Asset Rules
 
-Use official Birzhevik logo assets whenever the logo must be exact.
+Use real Birzhevik logo references whenever a logo, mark, wordmark, or lockup appears in the final image.
 
 ## Current Status
 
-The repo includes rendered identity PDF pages in `references/images/`. Clean standalone SVG/PNG logo assets are not yet bundled.
+The repo includes rendered identity PDF pages in `references/images/`. Clean standalone SVG assets are not yet bundled, but the repo now includes reference-derived PNG assets cropped from those supplied identity references.
 
-Expected future paths:
+Available reference-derived PNG assets:
+
+- `assets/brand/birzhevik-lockup-reference-dark.png`
+- `assets/brand/birzhevik-mark-reference-blue.png`
+- `assets/brand/birzhevik-lockup-reference-panel.png`
+- `assets/brand/birzhevik-mark-reference-blue-on-dark-tile.png`
+
+Expected future production exports:
 
 - `assets/brand/birzhevik-mark.svg`
 - `assets/brand/birzhevik-mark.png`
@@ -15,18 +22,22 @@ Expected future paths:
 
 ## Main Rule
 
-Do not ask the image model to invent, redraw, or retype the Birzhevik logo when exact fidelity matters.
+Never ask the image model to invent, redraw, retype, stylize, or approximate the official Birzhevik logo from memory. This applies even when exact fidelity merely seems "nice to have": generated logos drift, and a drifting logo must not ship.
 
-If exact logo fidelity matters:
+If the final image needs the official logo/lockup:
 
-1. Generate the composition with clean logo space.
-2. Composite the official logo asset after generation.
+1. Select one real logo reference from `assets/brand/` or `references/images/`.
+2. Attach or otherwise provide that logo reference to GPT Image 2 when the tool supports image references.
+3. In the prompt, require the logo to stay exactly as in the reference: same mark geometry, word spelling, proportions, colors, spacing, and orientation.
+4. Do not ask the model to create a new mark, retype the wordmark, trace from memory, recolor, stretch, crop, or approximate the logo.
 
-If no official asset is available:
+If the generation tool cannot pass image references, or the model distorts the logo:
 
-- leave clean space for manual placement;
-- use a simple text fallback `Биржевик`;
-- use an abstract S-like token only as a generated scene object, not as the official logo.
+- generate with a clean logo area;
+- repair by compositing one real `assets/brand/` logo/lockup file after generation;
+- do not accept the distorted logo as final.
+
+Generated token/coin/glass objects may use abstract Birzhevik-inspired geometry only as background scene objects, never as the final official lockup or mark.
 
 ## Placement
 

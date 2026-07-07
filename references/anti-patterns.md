@@ -43,7 +43,17 @@ Use abstract chart textures unless the user supplies real data or screenshot evi
 
 ## Logo Fidelity
 
-Do not present a generated approximation as the official Birzhevik logo. Use official assets when available or leave clean space.
+Do not present a generated approximation as the official Birzhevik logo. Never ask GPT Image 2 to redraw, retype, stylize, or approximate the official Birzhevik logo from memory.
+
+Use real references from `assets/brand/` or `references/images/` when a logo appears in the final image. The prompt must tell GPT Image 2 to preserve the referenced logo exactly without changes. If the model cannot receive a reference or distorts the logo, repair with a real `assets/brand/` overlay instead of shipping the distorted logo.
+
+Avoid:
+
+- generated S-like marks presented as official;
+- misspelled or warped `Биржевик` wordmarks;
+- logo-like marks created only by prompt wording, without a real logo reference;
+- retyped fallback wordmarks treated as the brand lockup;
+- recolored, stretched, traced, or distorted logo crops.
 
 ## Color Drift
 

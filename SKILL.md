@@ -13,7 +13,9 @@ The skill mirrors the Human 2.0 cover-generator structure: the agent must read r
 
 ## Generation Backend Lock
 
-Use GPT Image 2 as the approved generation backend for Birzhevik covers unless the user explicitly changes the backend. The image model must create the main composition: logo/token object, lighting, depth, market background, charts, glass chips, device surfaces, or podcast objects.
+Use GPT Image 2 as the approved generation backend for Birzhevik covers unless the user explicitly changes the backend. The image model must create the main composition: lighting, depth, market background, charts, glass chips, device surfaces, podcast objects, and Birzhevik-branded scene objects.
+
+Do not ask GPT Image 2 to invent, redraw, spell, or approximate the official Birzhevik logo, mark, or lockup from memory. When the final image needs a logo, first use real logo references from `assets/brand/` or `references/images/`, then send the request to GPT Image 2 with that logo reference and explicitly require the logo to be preserved exactly, unchanged, undistorted, unredrawn, and with the same proportions.
 
 ## Hard No Code-Generated Artwork Rule
 
@@ -23,11 +25,11 @@ The agent must not "draw" the main artwork with code, even if that seems easier 
 
 Manual code, image editing, or compositing is allowed only after GPT Image 2 has created the main scene, and only for narrow production fixes:
 
-- overlay the official Birzhevik logo if the generated logo is wrong;
+- repair a distorted logo by overlaying the real Birzhevik logo/lockup from `assets/brand/`;
 - replace or sharpen exact Russian headline text;
 - insert a real screenshot, chart, or broker/exchange evidence panel when accuracy matters.
 
-These fixes must not replace the generated artwork with a code-made template. If exact text or logo fidelity is critical, generate clean safe zones and then patch only the text/logo layer.
+These fixes must not replace the generated artwork with a code-made template. If exact text or logo fidelity is critical and image-reference fidelity fails, patch only the text/logo layer.
 
 ## Mandatory Reference Intake
 
@@ -90,7 +92,13 @@ Do not generate if you cannot name one DNA archetype and at least 3 concrete vis
 6. Choose the closest reference archetype from `references/reference-gallery.md`.
 7. Build one visual metaphor that supports the claim.
 8. Choose the Reference DNA archetype from `references/reference-dna.md`.
-9. Apply Birzhevik brand rules:
+9. Apply Birzhevik logo discipline:
+   - if the final image needs the official mark, wordmark, or lockup, select a real reference file from `assets/brand/` or `references/images/` before prompting;
+   - include or attach that real logo reference in the GPT Image 2 request whenever the tool supports image references;
+   - explicitly instruct GPT Image 2 to preserve the logo exactly as in the reference: no redraw, no retyping, no style drift, no proportion changes, no invented variants;
+   - never ask GPT Image 2 to draw or type the official logo/wordmark from memory;
+   - if the available generation tool cannot pass a logo reference, generate the scene with a clean logo area and repair by overlaying the real asset after generation.
+10. Apply Birzhevik brand rules:
    - dark financial canvas, usually near-black/navy;
    - primary darks `#00004A` and `#01037A`;
    - bright cyan/blue highlights `#02A5FF`, `#0199F7`, and `#0042FF`;
@@ -99,7 +107,7 @@ Do not generate if you cannot name one DNA archetype and at least 3 concrete vis
    - Vela Sans GX / Manrope typography direction;
    - market chart texture, candlesticks, grid, glass chips, 3D tokens, coins, microphone, devices, or mechanical manipulator only when they support the story;
    - premium finance tone: confident, precise, analytical, not hype-trader noise.
-10. Generate the image with GPT Image 2 when requested. Keep the final response concise: concept, headline, and any caveat about generated text/logo fidelity.
+11. Generate the image with GPT Image 2 when requested. Keep the final response concise: concept, headline, and which real logo reference was used or whether a post-generation logo repair was needed.
 
 ## Brand Language Rules
 
@@ -193,13 +201,13 @@ Reference evidence:
 Use these concrete traits from the inspected Birzhevik references: <3-5 traits covering dark palette, typography, glow, chart texture, object style, spacing, and logo placement>.
 
 Asset sources:
-Use official or user-provided assets for the Birzhevik logo and for all recognizable company, exchange, broker, or product marks. If an exact logo or chart cannot be verified, use a text-only chip or abstract market surface. Do not invent fake broker/exchange/company logos or fake market screenshots.
+Use real assets from `assets/brand/` or `references/images/` as Birzhevik logo references, and official or user-provided assets for all recognizable company, exchange, broker, or product marks. If an exact logo or chart cannot be verified, use a text-only chip or abstract market surface. Do not invent Birzhevik, broker, exchange, company, or product logos. Do not invent fake market screenshots.
 
 Brand style:
-Use the Birzhevik identity: deep navy/near-black canvas, dark blues #00004A and #01037A, bright cyan #02A5FF, electric blue #0199F7 and #0042FF, and the blue gradient #02A5FF -> #0042FF for the logo, glow, token rim, or key accent. Use white typography. Typography should follow Vela Sans GX / Manrope proportions: clean modern grotesk, large confident Cyrillic, tight but readable line height. Premium financial editorial mood, not casino trading hype.
+Use the Birzhevik identity: deep navy/near-black canvas, dark blues #00004A and #01037A, bright cyan #02A5FF, electric blue #0199F7 and #0042FF, and the blue gradient #02A5FF -> #0042FF for glow, token rim, or key accent. Use white typography. Typography should follow Vela Sans GX / Manrope proportions: clean modern grotesk, large confident Cyrillic, tight but readable line height. Premium financial editorial mood, not casino trading hype.
 
 Logo/footer:
-Use the official attached Birzhevik logo asset exactly if available. Preserve its aspect ratio. If no logo asset is available, leave clean space for manual placement or use a simple text lockup `Биржевик`.
+Use a real Birzhevik logo reference from `assets/brand/` or `references/images/` in the GPT Image 2 request. Tell the model to preserve the referenced logo exactly and unchanged: same mark geometry, word spelling, proportions, colors, and spacing. If the model distorts the logo or cannot accept image references, repair with a real `assets/brand/` logo overlay after generation.
 
 Core meaning:
 <one paragraph explaining the post's main claim and why the viewer should care>
@@ -228,7 +236,7 @@ When the user asks to fix a generated image:
 2. Identify exactly what failed: text, logo, crop, visual density, brand mismatch, wrong format, fake market data, or weak metaphor.
 3. Use `references/anti-patterns.md` to avoid repeating the error.
 4. For text fixes, reduce the amount of generated text or leave negative space for manual typography.
-5. For Birzhevik logo fixes, use an official logo asset from `assets/brand/` or leave clean space for manual placement.
+5. For Birzhevik logo fixes, use a real logo/lockup asset from `assets/brand/` or a real logo reference from `references/images/`. Never fix a bad logo by asking the model to redraw it from memory.
 6. For third-party logo fixes, use official/user-provided assets or a text-only card.
 7. For chart/screenshot fixes, insert the real screenshot or make the chart abstract. Do not present fake numbers as real data.
 
@@ -243,6 +251,7 @@ Before finalizing:
 - The headline is readable at thumbnail size.
 - The image communicates one idea, not a list of features.
 - GPT Image created the main composition.
+- The official Birzhevik logo/lockup, if present, was based on a real reference from `assets/brand/` or `references/images/`, not model imagination.
 - No fake market data, fake ticker, fake exchange logo, or guaranteed-return claim appears.
 - Critical text and logo are inside safe zones.
 - The result would not look like a generic trading-template if the headline were swapped.

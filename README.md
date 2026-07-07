@@ -8,6 +8,7 @@ This repo is modeled after `PotapKong/human20-cover-generator`, but the brand sy
 
 - Creates prompt-ready and generation-ready instructions for GPT Image 2.
 - Hard-locks the main artwork path to GPT Image 2, not code-generated PIL/HTML/SVG/Canvas templates.
+- Hard-locks Birzhevik logo usage to real references from `assets/brand/` or `references/images/`; GPT Image 2 must not invent the logo from memory.
 - Forces reference intake before generation.
 - Supports article covers, Telegram/Dzen covers, video previews, podcast covers, vertical social covers, and clean financial infographics.
 - Keeps third-party logos, charts, broker/exchange marks, and market screenshots on an official-asset or text-only fallback path.
@@ -20,7 +21,7 @@ SKILL.md                         # main agent workflow
 agents/openai.yaml               # Codex/OpenAI app metadata
 references/*.md                  # brand, format, prompt, safety, and asset rules
 references/images/               # visual references from the Birzhevik identity PDF
-assets/brand/                    # put official logo/font exports here
+assets/brand/                    # real logo crops/exports and future official logo/font files
 scripts/                         # helper scripts for third-party logo lookup
 docs/                            # source-skill analysis and brand-intake notes
 ```
@@ -58,7 +59,16 @@ Code or compositing may be used only after GPT Image 2 creates the main scene, a
 
 ## Logo And Fonts
 
-The rendered PDF references are included, but editable official logo/font files are not yet extracted as clean standalone production assets. Add them here when available:
+The rendered PDF references are included. The repo also contains reference-derived PNG logo assets cropped from the supplied Birzhevik identity references:
+
+```text
+assets/brand/birzhevik-lockup-reference-dark.png
+assets/brand/birzhevik-mark-reference-blue.png
+assets/brand/birzhevik-lockup-reference-panel.png
+assets/brand/birzhevik-mark-reference-blue-on-dark-tile.png
+```
+
+Add clean future production exports here when available:
 
 ```text
 assets/brand/birzhevik-mark.svg
@@ -68,7 +78,7 @@ assets/brand/VelaSansGX.ttf
 assets/brand/Manrope.ttf
 ```
 
-Until then, generation prompts should leave a clean logo safe zone or use a simple text fallback `Биржевик`.
+Generation prompts must first select a real logo reference from `assets/brand/` or `references/images/`, pass that reference to GPT Image 2 when image references are supported, and explicitly require the logo to stay unchanged: same geometry, spelling, colors, proportions, and spacing. Do not ask GPT Image 2 to draw, spell, stylize, approximate, or invent the official Birzhevik logo from memory. If the tool cannot pass a reference or the result distorts the logo, repair by overlaying a real `assets/brand/` asset after generation.
 
 ## Scripts
 

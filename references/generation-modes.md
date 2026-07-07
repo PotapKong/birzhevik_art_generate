@@ -8,6 +8,8 @@ All generation modes below are GPT Image 2-first modes. Do not use PIL, Python, 
 
 Code and compositing are allowed only as post-generation production fixes for exact text, official logo placement, crop repair, or supplied screenshots. They must not replace the main GPT Image 2 scene with a flat code-made template.
 
+Logo boundary: GPT Image 2 must not create the official Birzhevik logo, mark, wordmark, or lockup from memory. When a logo is needed, provide a real logo reference from `assets/brand/` or `references/images/` and prompt GPT Image 2 to preserve it exactly without redraw, retyping, distortion, recolor, or invented variants. If the tool cannot pass the reference or the result distorts the logo, repair with a real `assets/brand/` overlay after generation.
+
 ## Market Editorial Cover
 
 Use for articles, Telegram, Dzen, and market notes.
@@ -19,6 +21,7 @@ Prompt emphasis:
 - one market metaphor;
 - chart/grid atmosphere;
 - one strong hero/proof;
+- real Birzhevik logo reference passed to GPT Image 2 if a logo is needed;
 - no fake dense terminal text.
 
 ## Premium Token / Object Cover
@@ -40,7 +43,7 @@ Use for video thumbnails and channel visuals.
 Prompt emphasis:
 
 - large feed-readable headline;
-- Birzhevik lockup;
+- Birzhevik lockup preserved from a real `assets/brand/` or `references/images/` logo reference;
 - hero object on the right or center;
 - dark market background;
 - clean subtitle only when needed.
