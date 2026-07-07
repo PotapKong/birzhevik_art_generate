@@ -13,15 +13,21 @@ The skill mirrors the Human 2.0 cover-generator structure: the agent must read r
 
 ## Generation Backend Lock
 
-Use GPT Image 2 as the approved generation backend for Birzhevik covers unless the user explicitly changes the backend. The image model should create the main composition: logo/token object, lighting, depth, market background, charts, glass chips, device surfaces, or podcast objects.
+Use GPT Image 2 as the approved generation backend for Birzhevik covers unless the user explicitly changes the backend. The image model must create the main composition: logo/token object, lighting, depth, market background, charts, glass chips, device surfaces, or podcast objects.
 
-Manual code or compositing is allowed only for narrow production fixes:
+## Hard No Code-Generated Artwork Rule
+
+Do not use code generation as the primary image-making path for Birzhevik visuals. Do not create the cover/banner/preview as a flat PIL, Python, HTML, CSS, SVG, Canvas, or scripted layout when the task is to generate a branded image.
+
+The agent must not "draw" the main artwork with code, even if that seems easier for exact text or layout. Build a GPT Image 2 prompt from the references and generate the premium financial scene first.
+
+Manual code, image editing, or compositing is allowed only after GPT Image 2 has created the main scene, and only for narrow production fixes:
 
 - overlay the official Birzhevik logo if the generated logo is wrong;
 - replace or sharpen exact Russian headline text;
 - insert a real screenshot, chart, or broker/exchange evidence panel when accuracy matters.
 
-Do not rebuild the whole cover as a flat PIL/HTML/SVG layout when a generated premium financial scene is expected.
+These fixes must not replace the generated artwork with a code-made template. If exact text or logo fidelity is critical, generate clean safe zones and then patch only the text/logo layer.
 
 ## Mandatory Reference Intake
 

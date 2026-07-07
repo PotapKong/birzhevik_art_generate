@@ -7,6 +7,7 @@ This repo is modeled after `PotapKong/human20-cover-generator`, but the brand sy
 ## What It Does
 
 - Creates prompt-ready and generation-ready instructions for GPT Image 2.
+- Hard-locks the main artwork path to GPT Image 2, not code-generated PIL/HTML/SVG/Canvas templates.
 - Forces reference intake before generation.
 - Supports article covers, Telegram/Dzen covers, video previews, podcast covers, vertical social covers, and clean financial infographics.
 - Keeps third-party logos, charts, broker/exchange marks, and market screenshots on an official-asset or text-only fallback path.
@@ -48,6 +49,12 @@ Before any final image prompt or generation, the agent must read:
 - `references/headline-patterns.md`
 
 Then inspect 3-5 relevant images from `references/images/`, starting with `birzhevik-identity-page-1.png`.
+
+## No Code-Generated Artwork
+
+Birzhevik visuals are GPT Image 2-first. Do not create the main cover, banner, preview, podcast art, or social image as a flat PIL, Python, HTML, CSS, SVG, Canvas, or scripted layout.
+
+Code or compositing may be used only after GPT Image 2 creates the main scene, and only for narrow production fixes: official logo overlay, exact text correction, crop/resize, or insertion of supplied verified screenshots/assets.
 
 ## Logo And Fonts
 

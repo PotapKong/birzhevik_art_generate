@@ -2,6 +2,22 @@
 
 Use this file before refinement or when exact brand, text, market, or logo fidelity matters.
 
+## Code-Generated Artwork
+
+Avoid:
+
+- building the main cover with PIL, Python, HTML, CSS, SVG, Canvas, or scripted layout;
+- replacing GPT Image 2 with a flat template because text placement feels easier;
+- drawing fake 3D tokens, chart scenes, or brand backgrounds by code;
+- using code output as the final artwork when the user asked to generate a branded image.
+
+Allowed only after GPT Image 2 creates the main scene:
+
+- overlay exact official logo assets;
+- correct or sharpen short Russian text;
+- crop/outpaint/resize;
+- insert user-provided screenshots or verified assets.
+
 ## Investment Hype
 
 Avoid:

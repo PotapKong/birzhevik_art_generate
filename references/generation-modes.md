@@ -2,6 +2,12 @@
 
 Choose one mode before prompting.
 
+## Backend Boundary
+
+All generation modes below are GPT Image 2-first modes. Do not use PIL, Python, HTML, CSS, SVG, Canvas, or any scripted layout as the primary way to create a Birzhevik cover, banner, preview, or podcast artwork.
+
+Code and compositing are allowed only as post-generation production fixes for exact text, official logo placement, crop repair, or supplied screenshots. They must not replace the main GPT Image 2 scene with a flat code-made template.
+
 ## Market Editorial Cover
 
 Use for articles, Telegram, Dzen, and market notes.
