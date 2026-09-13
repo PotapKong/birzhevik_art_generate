@@ -77,6 +77,19 @@ Do not generate if you cannot name one DNA archetype and at least 3 concrete vis
 
 ## Core Workflow
 
+### Routing Pitfall
+
+If the user asks for a cover “в стиле Биржевика”, “по айдентике Биржевика”, or provides `PotapKong/birzhevik_art_generate`, route to this skill first. Do **not** substitute Human 2.0 cover rules or generic trading-card references. If the skill is not installed yet but the GitHub repo is supplied, install/update this skill from that repo, then load it and complete the reference intake before generation.
+
+### Promo Variant From A Reference Image
+
+When the user supplies an existing promo cover and asks for “такой же, только в стиле Биржевика”, treat the attachment as layout rhythm only and the Birzhevik references as the brand source of truth:
+
+1. Use the attachment for composition cues: left text block, accent bar, discount/code hierarchy, background chart rhythm, object balance.
+2. Generate the main background/art with GPT Image 2 using Birzhevik palette and references, preferably with **no readable text** when the copy must be exact.
+3. Add exact Russian text manually/deterministically after generation: brand name, discount, labels, promo code, scarcity line, CTA, or date. This is a narrow post-generation repair only; do not create or replace the main artwork with code.
+4. QA the final image visually for exact copy, 16:9 crop, no clipping, no pseudo-text, and readable thumbnail hierarchy before delivery.
+
 1. Read the supplied text and extract the central claim, not every detail.
 2. Choose the audience mode:
    - `Mass investor` for social, Telegram, Dzen, beginner investors, and broad finance readers.
