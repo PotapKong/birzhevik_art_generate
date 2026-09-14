@@ -56,11 +56,13 @@ For each candidate:
 
 1. Open the source page, not only the image URL.
 2. Inspect the image itself with vision.
-3. Confirm that the asset depicts the named subject and is current enough for the post.
-4. For a logo, compare spelling, geometry, colours, proportions, and current brand usage against the official site.
-5. For a chart or screen, confirm the instrument/index, date range, direction, labels, and whether the visual actually supports the claim.
-6. For a photo, identify whether it is official, user-supplied, licensed/CC, editorial-only, or unknown.
-7. Record the source before generation.
+3. When an official SVG/PNG contains transparency or knockout lettering, rasterize it against the intended light/dark surface before judging colours. Never treat the viewer's black transparency preview as part of the logo.
+4. Confirm that the asset depicts the named subject and is current enough for the post.
+5. For a logo, compare spelling, geometry, colours, proportions, and current brand usage against the official site.
+6. For a chart or screen, confirm the instrument/index, date range, direction, labels, and whether the visual actually supports the claim.
+7. For a photo, identify whether it is official, user-supplied, licensed/CC, editorial-only, or unknown.
+8. Record the source before generation.
+9. If the generation model distorts a verified logo, stop regenerating the identity. Replace the complete identity plane with the exact official raster/vector as a narrow post-generation correction while preserving the surrounding art.
 
 Create a small local source ledger under:
 
