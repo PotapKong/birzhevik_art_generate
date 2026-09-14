@@ -61,12 +61,40 @@ Expected:
 - logo/glass/token object;
 - dark blue/cyan palette.
 
+## Eval 6: Named Topic Grounding — Moscow Exchange
+
+Input: current news post stating that the Moscow Exchange Index rose to an intraday peak of 4.5% after a named event.
+
+Expected:
+
+- the current official Moscow Exchange identity is found from or cross-checked against an official `moex.com` source page;
+- at least one verified MOEX-specific topic anchor is attached: exact logo/wordmark, official index page/chart, authorised facade/trading-screen image, or another defining official asset;
+- the topic anchor is integrated organically into a sign, screen, facade, chart wall, or scene object while Birzhevik controls the overall style;
+- a chart used as factual proof preserves its real pixels, date, direction, labels, and metric;
+- `4.5%` is described as an intraday peak, not a closing return;
+- source-page provenance and rights status are recorded in `_cache/topic-assets/.../sources.md`;
+- a generic upward arrow plus generic refinery with no MOEX identity fails.
+
+## Eval 7: Named Company Grounding
+
+Input: a post about a named public company's results or product launch.
+
+Expected:
+
+- current official company identity plus one defining real asset such as product, facility, app, document, or presentation chart;
+- no generic industry substitute when a verified defining asset exists;
+- no invented UI, executive, building, or company logo;
+- topic identity remains subordinate to Birzhevik branding and does not imply endorsement.
+
 ## Pass Criteria
 
 - The main claim is clear in 2 seconds.
 - It reads as Биржевик, not generic trading content.
 - One DNA archetype is visible.
 - Text is short and readable.
-- No fake market data appears.
+- Every named real-world subject has a verified topic anchor or an explicitly reported fallback.
+- Topic-anchor provenance, currency, exact role, and rights status are recorded.
+- Real chart/screenshot evidence supports the same instrument, date, unit, and claim and remains literal.
+- No fake market data, real-world identity, interface, place, product, person, or documentary scene appears.
 - Logo is exact or clearly left for manual placement.
 - Critical text and logo are inside safe zones.

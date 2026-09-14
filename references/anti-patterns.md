@@ -75,7 +75,12 @@ Avoid:
 - Wall Street stock image;
 - overlaid arrows everywhere;
 - fake terminal screens;
-- five tickers in one thumbnail.
+- five tickers in one thumbnail;
+- a named exchange/company/regulator/product in the headline while the scene contains only a generic arrow, generic refinery, generic office, or anonymous chart;
+- using an industry stereotype when a verified defining logo, product, facility, document, or market screen is available;
+- search-result thumbnails, reposts, or watermarked commercial photos used without source-page provenance and rights review.
+
+A real-world named subject requires the topic-anchor workflow in `references/thematic-asset-sourcing.md`.
 
 ## Text Volume
 

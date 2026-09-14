@@ -4,11 +4,11 @@ Use this file when a Birzhevik cover needs a recognizable third-party company, p
 
 ## Source
 
-The local lookup workflow queries `glincker/thesvg`, an MIT-licensed public SVG library. The repo downloads only requested logos into:
+The local lookup workflow queries `glincker/thesvg`, an MIT-licensed public SVG library. It is a **discovery mirror**, not proof that a logo is official, current, complete, or approved for unrestricted reuse. The repo downloads only requested candidates into:
 
 `_cache/company-logos/`
 
-The cache is ignored by git.
+The cache is ignored by git. Before a candidate appears in a final Birzhevik image, compare it with the entity's current official website, press kit, brand page, investor-relations page, or product page and record that source-page URL under `references/thematic-asset-sourcing.md`.
 
 ## Find A Logo
 
@@ -34,10 +34,12 @@ Examples:
 
 ## Workflow
 
-1. Read `references/product-assets.md`.
-2. Try this local lookup before broad web search.
-3. If the SVG is found, use it as an official asset source.
-4. If no SVG is found, search official sources.
-5. If no reliable asset is found, use a text-only chip.
+1. Read `references/product-assets.md` and `references/thematic-asset-sourcing.md`.
+2. Try this local lookup to discover a likely candidate before broad web search.
+3. Open the named entity's official site and compare the candidate against the current mark: geometry, spelling, colours, proportions, clear space, and available variants.
+4. Record the official source page, direct candidate path, check time, and rights status in the topic source ledger.
+5. Treat the candidate as an identity anchor only after that cross-check. The third-party library itself is not enough to call an asset official.
+6. If the candidate does not match, search the official media/brand/press/IR source directly.
+7. If no reliable asset is found, use a text-only chip.
 
 Do not ask GPT Image to invent third-party logos.

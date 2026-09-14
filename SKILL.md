@@ -51,6 +51,7 @@ Always read these reference files for new Birzhevik generation:
 Read these conditionally:
 
 - `references/logo-assets.md` before adding a Birzhevik logo, mark, token, or footer.
+- `references/thematic-asset-sourcing.md` whenever a post names or centers a real exchange, company, broker, regulator, person, product, index, commodity, event, facility, document, or place. This is mandatory even when an abstract metaphor would be easier.
 - `references/product-assets.md` before adding third-party exchange, broker, company, ticker, website, GitHub, product, or chart screenshots.
 - `references/company-logo-library.md` before adding recognizable third-party company, platform, product, exchange, or broker logos.
 - `references/anti-patterns.md` before refinement, when exact text/logo/color fidelity matters, or when a previous generation missed the style.
@@ -69,6 +70,7 @@ Before generation, name the reference intake in working notes or prompt plan:
 - typography rule;
 - headline placement plan;
 - logo/mark/token integration plan;
+- topic anchor, source-page URL, rights status, and exact reference role when the post has a real-world subject;
 - palette rule;
 - market-data/product asset rule;
 - anti-patterns being actively avoided.
@@ -89,6 +91,22 @@ When the user supplies an existing promo cover and asks for “такой же, 
 2. Generate the main background/art with GPT Image 2 using Birzhevik palette and references, preferably with **no readable text** when the copy must be exact.
 3. Add exact Russian text manually/deterministically after generation: brand name, discount, labels, promo code, scarcity line, CTA, or date. This is a narrow post-generation repair only; do not create or replace the main artwork with code.
 4. QA the final image visually for exact copy, 16:9 crop, no clipping, no pseudo-text, and readable thumbnail hierarchy before delivery.
+
+### Real-World Topic Anchor Gate
+
+When the post names or clearly centers a real exchange, company, broker, regulator, person, product, index, commodity, event, facility, document, or place, a generic metaphor is not sufficient.
+
+1. Read `references/thematic-asset-sourcing.md` and extract the primary named subject, claim, date/period, and visual consequence.
+2. Search the web for at least one verified topic anchor: current official logo, official/authorised environment image, current product or UI, primary document, or real chart/screen tied to the claim.
+3. Prefer user-supplied and official sources, then licensed/CC sources. A search thumbnail or public news photo is not automatically reusable. An official asset is not automatically unrestricted: check the owner's trademark, brand-use, media-use, and data-reproduction terms.
+4. Open the source page, inspect the actual asset with vision, check currency, rights, required attribution/backlinks, and permission status, then record provenance in `_cache/topic-assets/<topic>/<date>/sources.md`.
+5. Attach the topic anchor as a separate reference with an explicit role. Birzhevik references control style; the topic reference controls real-world identity or factual proof.
+6. Preserve exact third-party logos and evidence pixels. Do not ask GPT Image to redraw a logo, chart, product screen, building, or person from memory.
+7. Integrate the anchor organically as a sign, facade element, monitor, chart wall, product surface, document, or scene object. Keep it subordinate to Birzhevik branding and never imply endorsement.
+8. If a real screenshot/chart is distorted, generate a clean placement surface and insert the literal verified capture after generation as a narrow production fix.
+9. If no trustworthy or reusable anchor exists, use a text-only identity chip plus abstract context and report the limitation. Never ship an invented named-subject visual.
+
+A named-topic cover fails when the headline says `Мосбиржа`, `Сбер`, `Газпром`, `ЦБ`, or another identifiable subject while the scene contains only a generic arrow, generic office, generic refinery, or anonymous chart.
 
 1. Read the supplied text and extract the central claim, not every detail.
 2. Choose the audience mode:
@@ -217,7 +235,10 @@ Reference evidence:
 Use these concrete traits from the inspected Birzhevik references: <3-5 traits covering dark palette, typography, glow, chart texture, object style, spacing, and logo placement>.
 
 Asset sources:
-Use real assets from `assets/brand/` or `references/images/` as Birzhevik logo references, and official or user-provided assets for all recognizable company, exchange, broker, or product marks. If an exact logo or chart cannot be verified, use a text-only chip or abstract market surface. Do not invent Birzhevik, broker, exchange, company, or product logos. Do not invent fake market screenshots.
+Use real assets from `assets/brand/` or `references/images/` as Birzhevik logo references. If the post has a real-world named subject, include the verified topic-anchor bundle from `references/thematic-asset-sourcing.md`: identify which reference is the official identity anchor, which is factual evidence, and which is environment reference. State the original source-page URL and rights status in working notes. Birzhevik references control style; topic references control identity and factual grounding. Preserve official company, exchange, broker, regulator, person, product, building, document, website, and chart attributes exactly. If an exact topic asset cannot be verified or reused, use a text-only chip or abstract market surface and report the limitation. Do not invent Birzhevik or third-party logos, real-world architecture, people, product UI, market screens, or precise charts.
+
+Topic grounding:
+Reference <N> is the verified identity anchor for <entity>, sourced from <official/licensed source>. Preserve its defining identity exactly and integrate it organically into <sign/screen/facade/product/document surface>. Reference <N+1>, when present, is factual evidence for <claim/date>; keep its pixels, values, labels, and direction literal. Do not merge, restyle, or confuse Birzhevik and third-party brands, and do not imply endorsement.
 
 Brand style:
 Use the Birzhevik identity: deep navy/near-black canvas, dark blues #00004A and #01037A, bright cyan #02A5FF, electric blue #0199F7 and #0042FF, and the blue gradient #02A5FF -> #0042FF for glow, token rim, or key accent. Use white typography. Typography should follow Vela Sans GX / Manrope proportions: clean modern grotesk, large confident Cyrillic, tight but readable line height. Premium financial editorial mood, not casino trading hype.
@@ -268,6 +289,9 @@ Before finalizing:
 - The image communicates one idea, not a list of features.
 - GPT Image created the main composition.
 - The official Birzhevik logo/lockup, if present, was based on a real reference from `assets/brand/` or `references/images/`, not model imagination.
+- A named real-world subject has at least one verified topic anchor with source-page provenance and rights status; generic scenery alone is a failure.
+- Third-party logos, products, places, people, documents, charts, and screens match their verified references and are not model inventions.
+- Real chart/screenshot evidence remains literal and supports the same instrument, date, unit, and claim used in the post.
 - No fake market data, fake ticker, fake exchange logo, or guaranteed-return claim appears.
 - Critical text and logo are inside safe zones.
 - The result would not look like a generic trading-template if the headline were swapped.
