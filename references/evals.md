@@ -73,7 +73,8 @@ Expected:
 - a chart used as factual proof preserves its real pixels, date, direction, labels, and metric;
 - `4.5%` is described as an intraday peak, not a closing return;
 - source-page provenance and rights status are recorded in `_cache/topic-assets/.../sources.md`;
-- a generic upward arrow plus generic refinery with no MOEX identity fails.
+- a generic upward arrow plus generic refinery with no MOEX identity fails;
+- a failed generic refinery/arrow cover is not reused as a composition reference because its off-topic hero can contaminate the new generation.
 
 ## Eval 7: Named Company Grounding
 

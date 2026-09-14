@@ -91,7 +91,9 @@ Use 3–6 inputs, each with one explicit role:
 3. `Topic identity anchor` — exact MOEX/company/product/regulator logo or defining object.
 4. `Topic evidence` — real screenshot, chart, document, or event image when the claim needs proof.
 5. `Environment reference` — facade, trading floor, factory, product, landscape, or other real context.
-6. `Composition reference` — only when needed.
+6. `Composition reference` — only when needed and only when its hero object is valid for the new topic.
+
+Do not pass a failed or off-topic cover as a composition reference merely to reuse its layout. Image models may preserve its wrong hero, facility, product, person, or background even when the prompt says not to. When a prior cover contains misleading generic scenery, use clean Birzhevik identity pages for spacing/material cues and describe the desired layout in text instead.
 
 Do not tell GPT Image to merge the identities or redraw either logo. State which reference controls brand style and which controls real-world identity.
 
