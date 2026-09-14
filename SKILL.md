@@ -25,13 +25,11 @@ Do not use code generation as the primary image-making path for Birzhevik visual
 
 The agent must not "draw" the main artwork with code, even if that seems easier for exact text or layout. Build a GPT Image 2 prompt from the references and generate the premium financial scene first.
 
-Manual code, image editing, or compositing is allowed only after GPT Image 2 has created the main scene, and only for narrow production fixes:
+Do not use PIL, OpenCV, ImageMagick, HTML/CSS/SVG/Canvas, or any other scripted compositing for visible artwork, typography, logos, screenshots, perspective placement, or layout repair. This applies even after GPT Image 2 has generated the main scene.
 
-- repair a distorted logo by overlaying the real Birzhevik logo/lockup from `assets/brand/`;
-- replace or sharpen exact Russian headline text;
-- insert a real screenshot, chart, or broker/exchange evidence panel when accuracy matters.
+When GPT Image 2 distorts text, a logo, or a topic anchor, use another GPT Image 2 generation/edit with the verified reference. If fidelity still fails, simplify the composition, omit that visible asset, or report the limitation instead of pasting it in by code.
 
-These fixes must not replace the generated artwork with a code-made template. If exact text or logo fidelity is critical and image-reference fidelity fails, patch only the text/logo layer.
+Programmatic tools may be used only for non-visual technical operations that do not alter visible content: file inspection, metadata checks, lossless format conversion, compression, and crop/resize when no artwork is added or moved.
 
 ## Mandatory Reference Intake
 
@@ -88,9 +86,9 @@ If the user asks for a cover “в стиле Биржевика”, “по а�
 When the user supplies an existing promo cover and asks for “такой же, только в стиле Биржевика”, treat the attachment as layout rhythm only and the Birzhevik references as the brand source of truth:
 
 1. Use the attachment for composition cues: left text block, accent bar, discount/code hierarchy, background chart rhythm, object balance.
-2. Generate the main background/art with GPT Image 2 using Birzhevik palette and references, preferably with **no readable text** when the copy must be exact.
-3. Add exact Russian text manually/deterministically after generation: brand name, discount, labels, promo code, scarcity line, CTA, or date. This is a narrow post-generation repair only; do not create or replace the main artwork with code.
-4. QA the final image visually for exact copy, 16:9 crop, no clipping, no pseudo-text, and readable thumbnail hierarchy before delivery.
+2. Generate the complete artwork with GPT Image 2 using Birzhevik palette and verified references.
+3. When the copy must be exact, include the final Russian text in the generation request and run GPT Image 2 refinement/edit passes for misspellings, spacing, or hierarchy. Do not add or replace visible text with PIL, OpenCV, HTML/CSS/SVG/Canvas, or scripted compositing.
+4. QA the generated image visually for exact copy, 16:9 crop, no clipping, no pseudo-text, and readable thumbnail hierarchy before delivery.
 
 ### Real-World Topic Anchor Gate
 
@@ -101,10 +99,10 @@ When the post names or clearly centers a real exchange, company, broker, regulat
 3. Prefer user-supplied and official sources, then licensed/CC sources. A search thumbnail or public news photo is not automatically reusable. An official asset is not automatically unrestricted: check the owner's trademark, brand-use, media-use, and data-reproduction terms.
 4. Open the source page, inspect the actual asset with vision, check currency, rights, required attribution/backlinks, and permission status, then record provenance in `_cache/topic-assets/<topic>/<date>/sources.md`.
 5. Attach the topic anchor as a separate reference with an explicit role. Birzhevik references control style; the topic reference controls real-world identity or factual proof. Do not attach a failed/off-topic prior cover for layout if it contains a misleading hero or background; describe the layout in text and use clean brand references instead.
-6. Preserve exact third-party logos and evidence pixels. Do not ask GPT Image to redraw a logo, chart, product screen, building, or person from memory.
+6. Preserve exact third-party logos and evidence pixels through the supplied image references. Do not ask GPT Image to redraw a logo, chart, product screen, building, or person from memory.
 7. Integrate the anchor organically as a sign, facade element, monitor, chart wall, product surface, document, or scene object. Keep it subordinate to Birzhevik branding and never imply endorsement.
-8. If a real screenshot/chart is distorted, generate a clean placement surface and insert the literal verified capture after generation as a narrow production fix.
-9. If no trustworthy or reusable anchor exists, use a text-only identity chip plus abstract context and report the limitation. Never ship an invented named-subject visual.
+8. If a logo, screenshot, chart, or evidence panel is distorted, run a GPT Image 2 refinement/edit using the verified reference. Never repair visible content with PIL, OpenCV, ImageMagick, HTML/CSS/SVG/Canvas, or scripted compositing.
+9. If exact fidelity still fails, simplify the scene or choose another verified topic anchor. If no trustworthy or reusable anchor exists, use a text-only identity chip plus abstract context and report the limitation. Never ship an invented or code-pasted named-subject visual.
 
 A named-topic cover fails when the headline says `Мосбиржа`, `Сбер`, `Газпром`, `ЦБ`, or another identifiable subject while the scene contains only a generic arrow, generic office, generic refinery, or anonymous chart.
 
@@ -131,7 +129,7 @@ A named-topic cover fails when the headline says `Мосбиржа`, `Сбер`,
    - explicitly instruct GPT Image 2 to preserve the logo exactly as in the reference: no redraw, no retyping, no style drift, no proportion changes, no invented variants;
    - instruct GPT Image 2 to integrate the referenced logo naturally into the scene surface or object, with matching light, perspective, material, and depth;
    - never ask GPT Image 2 to draw or type the official logo/wordmark from memory;
-   - if the available generation tool cannot pass a logo reference, generate the scene with a natural logo placement area and repair by overlaying the real asset after generation with matched lighting and perspective.
+   - if the available generation tool cannot pass a logo reference, omit the official logo or choose another verified topic anchor; do not paste the logo into the generated scene with code.
 10. Apply Birzhevik brand rules:
    - dark financial canvas, usually near-black/navy;
    - primary darks `#00004A` and `#01037A`;
@@ -141,7 +139,7 @@ A named-topic cover fails when the headline says `Мосбиржа`, `Сбер`,
    - Vela Sans GX / Manrope typography direction;
    - market chart texture, candlesticks, grid, glass chips, 3D tokens, coins, microphone, devices, or mechanical manipulator only when they support the story;
    - premium finance tone: confident, precise, analytical, not hype-trader noise.
-11. Generate the image with GPT Image 2 when requested. Keep the final response concise: concept, headline, and which real logo reference was used or whether a post-generation logo repair was needed.
+11. Generate and refine the complete visible image with GPT Image 2 when requested. Keep the final response concise: concept, headline, which real topic/logo reference was used, and whether the generated result passed fidelity QA.
 
 ## Brand Language Rules
 

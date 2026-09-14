@@ -4,9 +4,9 @@ Choose one mode before prompting.
 
 ## Backend Boundary
 
-All generation modes below are GPT Image 2-first modes. Do not use PIL, Python, HTML, CSS, SVG, Canvas, or any scripted layout as the primary way to create a Birzhevik cover, banner, preview, or podcast artwork.
+All visible Birzhevik artwork and refinement must be produced with GPT Image 2. Do not use PIL, Python, OpenCV, ImageMagick, HTML, CSS, SVG, Canvas, or scripted compositing to create or repair covers, banners, previews, podcast artwork, text, logos, screenshots, or layout.
 
-Code and compositing are allowed only as post-generation production fixes for exact text, official logo placement, crop repair, or supplied screenshots. They must not replace the main GPT Image 2 scene with a flat code-made template.
+Programmatic tools are limited to non-visual inspection, lossless format conversion/compression, and crop/resize that does not add or move visible artwork. When fidelity fails, refine/regenerate with GPT Image 2 or simplify the composition.
 
 Logo boundary: GPT Image 2 must not create the official Birzhevik logo, mark, wordmark, or lockup from memory. When a logo is needed, provide a real logo reference from `assets/brand/` or `references/images/` and prompt GPT Image 2 to preserve it exactly without redraw, retyping, distortion, recolor, or invented variants. The referenced logo should be organically integrated as part of the scene surface or hero object, with matching lighting, perspective, material, reflections, and depth. If the tool cannot pass the reference or the result distorts the logo, repair with a real `assets/brand/` overlay after generation and match the surface treatment.
 

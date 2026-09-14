@@ -53,9 +53,9 @@ Then inspect 3-5 relevant images from `references/images/`, starting with `birzh
 
 ## No Code-Generated Artwork
 
-Birzhevik visuals are GPT Image 2-first. Do not create the main cover, banner, preview, podcast art, or social image as a flat PIL, Python, HTML, CSS, SVG, Canvas, or scripted layout.
+Birzhevik visuals are GPT Image 2-only for visible content. Do not create or repair the cover, banner, preview, podcast art, social image, typography, logo placement, screenshot placement, or layout with PIL, Python, OpenCV, ImageMagick, HTML, CSS, SVG, Canvas, or scripted compositing.
 
-Code or compositing may be used only after GPT Image 2 creates the main scene, and only for narrow production fixes: official logo overlay, exact text correction, crop/resize, or insertion of supplied verified screenshots/assets.
+If GPT Image 2 distorts text, a logo, or a verified topic asset, refine/regenerate with the source reference. If fidelity still fails, simplify or omit the asset and report the limitation. Code is limited to non-visual technical checks, lossless format conversion/compression, and crop/resize that does not add or move visible artwork.
 
 ## Logo And Fonts
 
@@ -78,7 +78,7 @@ assets/brand/VelaSansGX.ttf
 assets/brand/Manrope.ttf
 ```
 
-Generation prompts must first select a real logo reference from `assets/brand/` or `references/images/`, pass that reference to GPT Image 2 when image references are supported, and explicitly require the logo to stay unchanged: same geometry, spelling, colors, proportions, and spacing. The logo should be organically integrated into the generated scene as a real surface or object detail, not pasted on as a flat sticker. Do not ask GPT Image 2 to draw, spell, stylize, approximate, or invent the official Birzhevik logo from memory. If the tool cannot pass a reference or the result distorts the logo, repair by overlaying a real `assets/brand/` asset after generation and match perspective, lighting, shadows, and material.
+Generation prompts must first select a real logo reference from `assets/brand/` or `references/images/`, pass that reference to GPT Image 2 when image references are supported, and explicitly require the logo to stay unchanged: same geometry, spelling, colors, proportions, and spacing. The logo should be organically integrated into the generated scene as a real surface or object detail, not pasted on as a flat sticker. Do not ask GPT Image 2 to draw, spell, stylize, approximate, or invent the official Birzhevik logo from memory. If the result distorts the logo, refine or regenerate it with GPT Image 2 and the real reference. If fidelity still fails, omit the logo or simplify the scene; do not repair it with PIL, OpenCV, ImageMagick, HTML/CSS/SVG/Canvas, or scripted compositing.
 
 ## Scripts
 

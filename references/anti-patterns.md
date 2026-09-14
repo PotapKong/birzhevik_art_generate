@@ -7,6 +7,7 @@ Use this file before refinement or when exact brand, text, market, or logo fidel
 Avoid:
 
 - building the main cover with PIL, Python, HTML, CSS, SVG, Canvas, or scripted layout;
+- repairing or placing visible text, logos, screenshots, or evidence with PIL, OpenCV, ImageMagick, HTML/CSS/SVG/Canvas, or scripted compositing after generation;
 - replacing GPT Image 2 with a flat template because text placement feels easier;
 - drawing fake 3D tokens, chart scenes, or brand backgrounds by code;
 - using code output as the final artwork when the user asked to generate a branded image.

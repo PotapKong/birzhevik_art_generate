@@ -74,7 +74,8 @@ Expected:
 - `4.5%` is described as an intraday peak, not a closing return;
 - source-page provenance and rights status are recorded in `_cache/topic-assets/.../sources.md`;
 - a generic upward arrow plus generic refinery with no MOEX identity fails;
-- a failed generic refinery/arrow cover is not reused as a composition reference because its off-topic hero can contaminate the new generation.
+- a failed generic refinery/arrow cover is not reused as a composition reference because its off-topic hero can contaminate the new generation;
+- the final visible cover is generated/refined with GPT Image 2 only, with no PIL/OpenCV/ImageMagick/HTML/CSS/SVG/Canvas text or logo compositing.
 
 ## Eval 7: Named Company Grounding
 
@@ -97,5 +98,5 @@ Expected:
 - Topic-anchor provenance, currency, exact role, and rights status are recorded.
 - Real chart/screenshot evidence supports the same instrument, date, unit, and claim and remains literal.
 - No fake market data, real-world identity, interface, place, product, person, or documentary scene appears.
-- Logo is exact or clearly left for manual placement.
+- Logo and critical text are generated from supplied references, pass exact visual QA, and are never pasted or retyped by scripted compositing.
 - Critical text and logo are inside safe zones.

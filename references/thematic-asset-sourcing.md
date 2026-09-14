@@ -62,7 +62,7 @@ For each candidate:
 6. For a chart or screen, confirm the instrument/index, date range, direction, labels, and whether the visual actually supports the claim.
 7. For a photo, identify whether it is official, user-supplied, licensed/CC, editorial-only, or unknown.
 8. Record the source before generation.
-9. If the generation model distorts a verified logo, stop regenerating the identity. Replace the complete identity plane with the exact official raster/vector as a narrow post-generation correction while preserving the surrounding art.
+9. If the generation model distorts a verified logo, screenshot, chart, or other evidence, refine or regenerate it with GPT Image 2 and the verified reference. Do not repair visible content through PIL, OpenCV, ImageMagick, HTML/CSS/SVG/Canvas, or scripted compositing. If fidelity still fails, simplify the composition or choose another verified anchor.
 
 Create a small local source ledger under:
 
